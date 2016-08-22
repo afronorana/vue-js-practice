@@ -5,24 +5,35 @@
     <meta charset="utf-8">
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="bootstrap.css">
 </head>
 
 <body>
 <div id="app">
 
-    <button type="submit" @click="count++">
-        Increment counter: {{ count }}
+    <button type="submit" @click="likes += 1">
+        Likes:
+        {{ likes }}
     </button>
+
+    <button type="submit" @click="dislikes += 1">
+        Dislikes:
+        {{ dislikes }}
+    </button>
+
+    <h1>
+    </h1>
 
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.js"></script>
 <script>
     new Vue({
        el: '#app',
 
         data: {
-            count: 0
+            likes: 0,
+            dislikes: 0
         }
     });
 
