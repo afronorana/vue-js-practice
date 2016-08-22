@@ -1,0 +1,12 @@
+span.error{
+    display: block;
+    font-style: italic;
+    color: #ff0000;
+}
+textarea {
+    width: 400px;
+    height: 150px;
+}
+button{
+    display: block;
+}
