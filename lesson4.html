@@ -6,48 +6,40 @@
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="bootstrap.css">
+    <script   src="https://code.jquery.com/jquery-3.1.0.js"   integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="   crossorigin="anonymous"></script>
 </head>
 
 <body>
 <div id="app">
-
-    <counter subject="Likes"></counter>
-
-    <counter subject="Dislikes"></counter>
-
-    <h1>
-    </h1>
-
+    <counter titulli="Hehehe"></counter>
+    <counter titulli="Hyhyhyhy"></counter>
 </div>
 
 <template id="counter-template">
-    <h1>{{ subject }}</h1>
-    <button @click="count += 1">{{ count }}</button>
+    <div style="border:1px solid blue; display: inline-block; margin:20px; width:200px; height: 200px;">
+        <h1>{{ titulli }} </h1>
+        <button @click="count += 1">{{ count }}</button>
+    </div>
 </template>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.js"></script>
 <script>
 
     Vue.component('counter', {
-
         template: '#counter-template',
 
-        props: ['subject'],
-
         data: function(){
-            return {count: 0};
-        }
+                return { count: 0 }
+        },
+
+        props : ['titulli']
 
     });
 
     new Vue({
-        el: '#app',
-//
-//        data: {
-//            likes: 0,
-//            dislikes: 0
-//        }
-    });
+        el: app,
+
+    })
 
 </script>
 
