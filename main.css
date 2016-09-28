@@ -1,37 +1,13 @@
-span.error{
-    display: block;
-    font-style: italic;
-    color: #ff0000;
+.plan__name{
+    padding-top: 15px;
+    display: inline-block;
+    min-width: 100px;
 }
-textarea {
-    width: 400px;
-    height: 150px;
-}
-button{
-    display: block;
+.plan__price{
+    display: inline-block;
+    min-width: 100px;
 }
 
-
-
-.hi{
-    position: relative;
-    margin: 0 auto;
-    width: 100px;
-    height: 150px;
-    background: url("gb_walk.png") ;
-    animation: walk 2s steps(6) infinite;
-}
-@keyframes walk {
-    0%
-        {background-position: 0px 0px;
-         left:-150px;}
-    49.999%
-        {background-position: -624px 0px;
-        left:50px;}
-    50%
-        {background-position: 0px -150px;
-        left:50px;}
-    100%
-        {background-position: -624px -150px;
-        left:-150px;}
+.btn {
+    min-width: 100px;
 }

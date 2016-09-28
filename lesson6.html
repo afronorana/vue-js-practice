@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="https://code.jquery.com/jquery-3.1.0.js"
+            integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div id="app">
+    <div v-for="plan in plans">
+        <plan :plan="plan" :active.sync="active"></plan>
+    </div>
+</div>
+
+<template id="plan-template">
+    <div>
+        <span class="plan__name">{{ plan.name }}</span>
+        <span class="plan__price">{{ plan.price }}$/month</span>
+
+        <button class="btn" @click="setActivePlan"
+                            v-show="plan.name !== active.name"
+        >
+            {{ isUpgrade ? 'Upgrade' : 'Downgrade' }}</button>
+        <button class="btn disabled" v-else> Selected </button>
+    </div>
+</template>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.js"></script>
+<script src="lesson6.js"></script>
+
+</body>
+</html>
